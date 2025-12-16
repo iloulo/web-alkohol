@@ -1029,3 +1029,207 @@ body::before{
   border-color: rgba(34,197,94,.28);
   box-shadow: 0 0 0 3px rgba(34,197,94,.10);
 }
+/* ======================================================
+   Learning Objectives — Inline (No Box)
+====================================================== */
+
+.learningGoals{
+  max-width: 900px;
+  margin: 16px auto 28px;
+  padding: 0;
+}
+
+/* Judul simpel + garis aksen */
+.learningGoals h3{
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #e5e7eb;
+  letter-spacing: .2px;
+  position: relative;
+}
+
+.learningGoals h3::after{
+  content:"";
+  display:block;
+  width: 48px;
+  height: 2px;
+  margin-top: 6px;
+  background: linear-gradient(
+    90deg,
+    #93c5fd,
+    transparent
+  );
+  opacity:.8;
+}
+
+/* List menyatu dengan teks halaman */
+.learningGoals ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.learningGoals li{
+  margin-bottom: 6px;
+  line-height: 1.6;
+  color: rgba(255,255,255,.85);
+}
+
+.learningGoals li strong{
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+/* Animasi masuk sangat halus */
+.learningGoals{
+  animation: fadeSoft .4s ease both;
+}
+
+@keyframes fadeSoft{
+  from{
+    opacity:0;
+    transform: translateY(4px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .learningGoals{
+    margin: 14px 14px 24px;
+  }
+}
+/* ===============================
+   MiniGame 2 Kolom (Fix Kosong)
+=============================== */
+
+.miniGame__grid{
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.miniGame__left{
+  padding-right: 6px;
+}
+
+.miniGame__right{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Mobile: jadi 1 kolom */
+@media (max-width: 900px){
+  .miniGame__grid{
+    grid-template-columns: 1fr;
+  }
+}
+/* ==========================
+   Hero Left Filler (No Box)
+========================== */
+
+.miniMap{
+  margin-top: 18px;
+  max-width: 720px;
+}
+
+.miniMap h3{
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 750;
+  color: rgba(255,255,255,.92);
+  position: relative;
+}
+
+.miniMap h3::after{
+  content:"";
+  display:block;
+  width: 56px;
+  height: 2px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, rgba(147,197,253,.95), transparent);
+  opacity:.9;
+}
+
+.miniMapGrid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px 14px;
+}
+
+.mmItem{
+  padding: 10px 0;         /* no box: hanya padding vertikal */
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.mmTitle{
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(255,255,255,.9);
+}
+
+.mmText{
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255,255,255,.78);
+}
+
+.miniChecklist{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 12px;
+  color: rgba(255,255,255,.72);
+  font-size: 12.5px;
+}
+
+@media (max-width: 900px){
+  .miniMapGrid{ grid-template-columns: 1fr; }
+}
+/* ==========================
+   Quick Examples (Hero Left)
+========================== */
+
+.quickExamples{
+  margin-top: 16px;
+  max-width: 720px;
+}
+
+.quickExamples h3{
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 750;
+  color: rgba(255,255,255,.92);
+  position: relative;
+}
+
+.quickExamples h3::after{
+  content:"";
+  display:block;
+  width: 44px;
+  height: 2px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, rgba(147,197,253,.9), transparent);
+}
+
+.quickExamples ul{
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.quickExamples li{
+  margin-bottom: 5px;
+  line-height: 1.55;
+  font-size: 13px;
+  color: rgba(255,255,255,.78);
+}
+
+.quickExamples b{
+  color: rgba(255,255,255,.9);
+}
