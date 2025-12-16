@@ -1,0 +1,1031 @@
+/* =========================
+   Base
+========================= */
+:root{
+  --bg:#070b12;
+  --bg2:#0b1220;
+  --card:rgba(255,255,255,.06);
+  --card2:rgba(255,255,255,.04);
+  --border:rgba(255,255,255,.10);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.65);
+  --accent:#22c55e;
+  --accent2:#38bdf8;
+  --shadow:0 16px 50px rgba(0,0,0,.35);
+  --radius:18px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--text);
+  background: radial-gradient(1200px 700px at 70% 10%, rgba(56,189,248,.14), transparent 60%),
+              radial-gradient(1000px 650px at 20% 25%, rgba(34,197,94,.10), transparent 55%),
+              linear-gradient(180deg, var(--bg), var(--bg2));
+}
+
+a{color:inherit; text-decoration:none}
+a.link{color:var(--accent2); text-decoration:underline}
+code{background:rgba(255,255,255,.08); padding:2px 6px; border-radius:8px}
+
+.container{
+  width:min(1100px, calc(100% - 32px));
+  margin:0 auto;
+}
+
+.muted{color:var(--muted)}
+.tiny{font-size:12px}
+.lead{font-size:16px; line-height:1.7}
+h1,h2,h3{margin:0 0 10px}
+h1{font-size:34px; letter-spacing:.2px}
+h2{font-size:26px}
+h3{font-size:18px}
+
+/* ===== Chem formatting ===== */
+.chem{
+  font-variant-numeric: tabular-nums;
+  padding:2px 6px;
+  border-radius:10px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+/* =========================
+   Header
+========================= */
+.siteHeader{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(180deg, rgba(5,8,14,.78), rgba(5,8,14,.35));
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.strip{
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.strip--1{padding:12px 0}
+.strip--2{padding:8px 0; border-bottom:0}
+
+.headerRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.brand{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.brandIcon{
+  width:42px;height:42px;
+  border-radius:14px;
+  display:grid; place-items:center;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:var(--shadow);
+}
+.brandTitle{font-weight:800}
+.brandSub{color:var(--muted); font-size:12px}
+
+.menuBtn{
+  display:none;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* ===== Floating nav wrap ===== */
+.floatingNavWrap{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;
+}
+
+.primaryNav{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.primaryNav a{
+  display:inline-flex;
+  align-items:center;
+  height:38px;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.05);
+  color:var(--text);
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+.primaryNav a:hover{
+  transform: translateY(-1px);
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.14);
+}
+
+/* Dropdown Daftar Materi */
+.dropdown{position:relative; display:inline-flex}
+.subnavToggle{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  height:38px;
+  padding:8px 12px;
+  border-radius:999px;
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+}
+.subnavToggle.active{
+  border-color:rgba(56,189,248,.35);
+  box-shadow: 0 0 0 3px rgba(56,189,248,.10);
+}
+.subnavMenu--dropdown{
+  position:absolute;
+  right:0;
+  top:44px;
+  width:260px;
+  padding:10px;
+  border-radius:16px;
+  background: rgba(10,16,28,.92);
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:var(--shadow);
+  display:none;
+  gap:8px;
+}
+.subnavMenu--dropdown.show{display:grid}
+.subnavMenu--dropdown a{
+  padding:10px 10px;
+  border-radius:12px;
+  font-size:13px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+.subnavMenu--dropdown a:hover{
+  background:rgba(255,255,255,.08);
+}
+
+/* =========================
+   Sections
+========================= */
+.section{padding:44px 0}
+.section.alt{background:rgba(255,255,255,.02)}
+.hero{padding-top:34px}
+
+.grid2{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:18px;
+}
+@media (max-width: 980px){
+  .grid2{grid-template-columns:1fr}
+}
+
+.cards3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+  margin:18px 0 12px;
+}
+@media (max-width: 980px){
+  .cards3{grid-template-columns:1fr}
+}
+
+.card, .panel, .contentCard, .caseCard{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:14px;
+  box-shadow:var(--shadow);
+}
+
+.cardKicker{color:var(--muted); font-size:12px}
+.cardBig{font-size:24px; font-weight:800; margin:6px 0}
+
+.panel ul{margin:10px 0 0 18px; color:var(--muted)}
+.panelHint{
+  margin-top:12px;
+  padding:10px;
+  border-radius:14px;
+  background:rgba(56,189,248,.10);
+  border:1px solid rgba(56,189,248,.18);
+}
+
+.note{
+  margin-top:14px;
+  padding:12px 14px;
+  border-radius:16px;
+  background:rgba(34,197,94,.08);
+  border:1px solid rgba(34,197,94,.18);
+  color:rgba(255,255,255,.86);
+}
+
+.ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:40px;
+  padding:0 14px;
+  border-radius:14px;
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+}
+.btn:hover{background:rgba(255,255,255,.08)}
+.btn--primary{
+  background:rgba(56,189,248,.18);
+  border-color:rgba(56,189,248,.30);
+}
+.btn--primary:hover{background:rgba(56,189,248,.24)}
+
+.contentGrid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+  margin-top:14px;
+}
+@media (max-width: 980px){
+  .contentGrid{grid-template-columns:1fr}
+}
+
+.contentCard p, .contentCard li{color:var(--muted); line-height:1.7}
+.contentCard ul, .contentCard ol{margin:10px 0 0 20px}
+
+.miniTable{
+  margin-top:10px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  overflow:hidden;
+}
+.miniTable .row{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap:0;
+  padding:10px 12px;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.miniTable .row.head{background:rgba(255,255,255,.05); font-weight:700}
+.miniTable .row:first-child{border-top:0}
+
+/* Data table */
+.tableWrap{
+  margin-top:12px;
+  overflow:auto;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+}
+.dataTable{
+  width:100%;
+  border-collapse:collapse;
+  min-width:720px;
+}
+.dataTable th, .dataTable td{
+  padding:12px 14px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  vertical-align:top;
+}
+.dataTable th{background:rgba(255,255,255,.05); text-align:left}
+.dataTable td{color:var(--muted)}
+
+/* Cases */
+.caseGrid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+  margin-top:14px;
+}
+@media (max-width: 980px){
+  .caseGrid{grid-template-columns:1fr}
+}
+.caseCard p, .caseCard li{color:var(--muted); line-height:1.7}
+.caseCard ul{margin:10px 0 0 20px}
+
+/* Video */
+.videoWrap{
+  margin-top:12px;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(0,0,0,.35);
+}
+.videoWrap iframe{display:block; width:100%; height:min(60vh, 420px)}
+
+/* PubChem */
+.pcControls{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.input{
+  flex: 1 1 360px;
+  height:40px;
+  border-radius:14px;
+  padding:0 12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  outline:none;
+}
+.input:focus{border-color:rgba(56,189,248,.40); box-shadow:0 0 0 3px rgba(56,189,248,.12)}
+
+.status{
+  margin-top:12px;
+  color:var(--muted);
+}
+
+.pcGrid{
+  margin-top:12px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
+@media (max-width: 980px){
+  .pcGrid{grid-template-columns:1fr}
+}
+.pcCard{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:18px;
+  padding:14px;
+  box-shadow:var(--shadow);
+}
+.pcMeta{
+  display:grid;
+  gap:6px;
+  margin-top:10px;
+  color:var(--muted);
+}
+.badge{
+  margin-top:10px;
+  display:inline-flex;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(34,197,94,.22);
+  background:rgba(34,197,94,.08);
+  font-size:12px;
+  color:rgba(255,255,255,.86);
+}
+.pcActions{margin-top:10px}
+
+/* 3D Viewer - DIPERBAIKI */
+.rowControls{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.labelRow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.label{color:var(--muted)}
+.select{
+  height:40px;
+  padding:0 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(10,16,28,.98);
+  color:rgba(255,255,255,.92);
+}
+
+/* Container untuk 3D viewer - PERBAIKAN PENTING */
+.viewer3d{
+  margin-top:12px;
+  width:100%;
+  height:500px;
+  min-height:420px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.10);
+  background:#000;
+  overflow:hidden;
+  position:relative;
+}
+
+/* Pastikan canvas 3Dmol.js ter-render dengan benar */
+.viewer3d canvas{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+}
+
+/* Quiz */
+.quiz{margin-top:12px; display:grid; gap:12px}
+.question{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:18px;
+  padding:14px;
+  box-shadow:var(--shadow);
+}
+.question__title{font-weight:800; margin-bottom:10px}
+.options{display:grid; gap:8px}
+.option{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:10px;
+  border-radius:14px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  cursor:pointer;
+}
+.option input{margin-top:3px}
+.feedback{
+  margin-top:10px;
+  padding:10px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.05);
+  color:var(--muted);
+}
+.feedback.correct{border-color:rgba(34,197,94,.30); background:rgba(34,197,94,.10); color:rgba(255,255,255,.90)}
+.feedback.wrong{border-color:rgba(248,113,113,.30); background:rgba(248,113,113,.10); color:rgba(255,255,255,.90)}
+.feedback.warning{border-color:rgba(250,204,21,.30); background:rgba(250,204,21,.10); color:rgba(255,255,255,.90)}
+
+.quizActions{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.score{color:var(--text); font-weight:800}
+
+/* Footer */
+.footer{margin-top:18px}
+
+/* =========================
+   Responsive header
+========================= */
+@media (max-width: 980px){
+  .menuBtn{display:inline-flex}
+
+  .primaryNav--floating{
+    display:none;
+    justify-content:flex-start;
+    padding:8px 0;
+  }
+  .primaryNav--floating.show{display:flex}
+
+  .floatingNavWrap{
+    justify-content:space-between;
+  }
+
+  .subnavMenu--dropdown{
+    width:min(320px, calc(100vw - 32px));
+  }
+  
+  .viewer3d{
+    height:380px;
+    min-height:300px;
+  }
+}
+
+/* =========================
+   Smooth scroll + offset
+========================= */
+html{scroll-behavior:smooth}
+section{scroll-margin-top:110px}
+
+/* ======================================================
+   Motion Pack (Soft + Playful)
+   CSS-only + ready for optional JS reveal
+====================================================== */
+
+:root{
+  --motion-lift: 3px;          /* seberapa “naik” saat hover */
+  --motion-glow: .28;          /* intensitas glow */
+  --motion-sheen: .22;         /* intensitas sheen tombol */
+}
+
+/* Hormati user yang tidak suka animasi */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+}
+
+/* ===== A) Background hidup (soft) ===== */
+body::before{
+  content:"";
+  position: fixed;
+  inset: -22%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 560px at 25% 20%, rgba(56,189,248,.14), transparent 55%),
+    radial-gradient(820px 560px at 75% 28%, rgba(34,197,94,.12), transparent 58%),
+    radial-gradient(680px 480px at 55% 78%, rgba(168,85,247,.10), transparent 60%);
+  filter: blur(12px);
+  opacity: .85;
+  animation: bgDrift 14s ease-in-out infinite alternate;
+}
+@keyframes bgDrift{
+  from{ transform: translate3d(-1.6%, -1.2%, 0) scale(1.02); }
+  to  { transform: translate3d( 1.6%,  1.2%, 0) scale(1.05); }
+}
+
+/* ===== B) Brand icon playful, tapi halus ===== */
+.brandIcon{
+  animation: iconFloat 3.6s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes iconFloat{
+  0%,100%{ transform: translateY(0) rotate(0deg); }
+  50%    { transform: translateY(-3px) rotate(-1deg); }
+}
+
+/* ===== C) Card hover lift + glow (soft+playful) ===== */
+.card, .panel, .contentCard, .caseCard, .pcCard, .question{
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+  will-change: transform;
+}
+.card:hover, .panel:hover, .contentCard:hover, .caseCard:hover, .pcCard:hover, .question:hover{
+  transform: translateY(calc(-1 * var(--motion-lift)));
+  border-color: rgba(56,189,248,.22);
+  background: rgba(255,255,255,.07);
+  box-shadow:
+    0 18px 55px rgba(0,0,0,.42),
+    0 0 0 3px rgba(56,189,248, calc(var(--motion-glow) * .25));
+}
+
+/* ===== D) Tombol: shimmer + “press” feel ===== */
+.btn{
+  position: relative;
+  overflow: hidden;
+  transition: transform .10s ease, box-shadow .14s ease, background .14s ease;
+}
+.btn:active{ transform: translateY(1px) scale(.99); }
+
+.btn::after{
+  content:"";
+  position:absolute;
+  inset:-70% -45%;
+  transform: translateX(-130%) rotate(18deg);
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,var(--motion-sheen)) 46%,
+    transparent 72%);
+  transition: transform .48s ease;
+}
+.btn:hover::after{ transform: translateX(130%) rotate(18deg); }
+
+.btn--primary{
+  box-shadow: 0 10px 26px rgba(56,189,248,.14);
+}
+.btn--primary:hover{
+  box-shadow: 0 16px 40px rgba(56,189,248,.18);
+}
+
+/* ===== E) Nav pill: micro-interaction ===== */
+.primaryNav a, .subnavToggle{
+  transition: transform .14s ease, background .14s ease, border-color .14s ease, box-shadow .14s ease;
+}
+.primaryNav a:hover, .subnavToggle:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.25);
+}
+
+/* ===== F) Separator tipis buat depth ===== */
+.section{ position: relative; }
+.section::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:0;
+  height:1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent);
+  opacity:.9;
+}
+
+/* ===== G) READY: Scroll-reveal (butuh JS kecil di bawah) ===== */
+.reveal{
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.reveal.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ======================================================
+   Glowing Navigation Buttons (Soft + Playful)
+   Target: Halaman Awal, PubChem, Struktur 3D, dll
+====================================================== */
+
+/* Base glow */
+.primaryNav a,
+.subnavToggle{
+  position: relative;
+  isolation: isolate;
+  box-shadow:
+    0 0 0 rgba(56,189,248,0);
+  transition:
+    box-shadow .25s ease,
+    transform .15s ease,
+    border-color .15s ease,
+    background .15s ease;
+}
+
+/* Outer glow layer */
+.primaryNav a::before,
+.subnavToggle::before{
+  content:"";
+  position:absolute;
+  inset:-3px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(56,189,248,.65),
+    rgba(34,197,94,.55),
+    rgba(168,85,247,.55)
+  );
+  opacity: 0;
+  filter: blur(10px);
+  z-index: -1;
+  transition: opacity .25s ease;
+}
+
+/* Hover glow */
+.primaryNav a:hover,
+.subnavToggle:hover{
+  transform: translateY(-1px);
+  border-color: rgba(56,189,248,.45);
+  box-shadow:
+    0 0 14px rgba(56,189,248,.45),
+    0 0 28px rgba(56,189,248,.25);
+}
+
+.primaryNav a:hover::before,
+.subnavToggle:hover::before{
+  opacity: .85;
+}
+
+/* Active / current section glow (optional tapi cakep) */
+.primaryNav a:focus-visible,
+.subnavToggle.active{
+  outline: none;
+  border-color: rgba(56,189,248,.6);
+  box-shadow:
+    0 0 18px rgba(56,189,248,.55),
+    0 0 36px rgba(56,189,248,.30);
+}
+
+.primaryNav a:focus-visible::before,
+.subnavToggle.active::before{
+  opacity: 1;
+}
+
+/* Mobile nav glow tetap halus */
+@media (max-width: 980px){
+  .primaryNav a{
+    width: fit-content;
+  }
+}
+/* ======================================================
+   Interactive table polish (CSS)
+====================================================== */
+
+.tableWrap{
+  position: relative;
+  overscroll-behavior: contain;
+}
+
+/* Sticky header */
+.dataTable thead th{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+/* Zebra + hover */
+.dataTable tbody tr:nth-child(odd){
+  background: rgba(255,255,255,.015);
+}
+.dataTable tbody tr{
+  transition: background .15s ease, transform .15s ease;
+}
+.dataTable tbody tr:hover{
+  background: rgba(56,189,248,.06);
+}
+
+/* Klik-able header (untuk sort) */
+.dataTable thead th.sortable{
+  cursor: pointer;
+  user-select: none;
+}
+.dataTable thead th.sortable:hover{
+  background: rgba(255,255,255,.075);
+}
+
+/* Sort indicator */
+.dataTable thead th .sortIndicator{
+  margin-left: 8px;
+  opacity: .7;
+  font-size: 12px;
+}
+
+/* Controls bar (dibuat oleh JS) */
+.tableControls{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin: 12px 0 10px;
+}
+
+.tableSearch{
+  flex: 1 1 280px;
+  height:40px;
+  border-radius:14px;
+  padding:0 12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:rgba(255,255,255,.92);
+  outline:none;
+}
+.tableSearch:focus{
+  border-color:rgba(56,189,248,.40);
+  box-shadow:0 0 0 3px rgba(56,189,248,.12);
+}
+
+.tableHint{
+  color: rgba(255,255,255,.65);
+  font-size: 12px;
+}
+
+/* ======================================================
+   Clean Glow Navigation (NO gradient, calm & academic)
+====================================================== */
+
+/* Base nav button */
+.primaryNav a,
+.subnavToggle{
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform .15s ease,
+    box-shadow .2s ease,
+    border-color .2s ease,
+    background .2s ease;
+}
+
+/* Glow layer (single color, soft) */
+.primaryNav a::before,
+.subnavToggle::before{
+  content:"";
+  position:absolute;
+  inset:-4px;
+  border-radius: inherit;
+  background: rgba(56,189,248,.35); /* satu warna saja */
+  filter: blur(14px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .25s ease;
+}
+
+/* Hover state */
+.primaryNav a:hover,
+.subnavToggle:hover{
+  transform: translateY(-1px);
+  border-color: rgba(56,189,248,.45);
+  box-shadow:
+    0 0 0 1px rgba(56,189,248,.25),
+    0 8px 26px rgba(56,189,248,.18);
+}
+
+.primaryNav a:hover::before,
+.subnavToggle:hover::before{
+  opacity: .9;
+}
+
+/* Active / focus */
+.primaryNav a:focus-visible,
+.subnavToggle.active{
+  outline: none;
+  border-color: rgba(56,189,248,.6);
+  box-shadow:
+    0 0 0 1px rgba(56,189,248,.35),
+    0 10px 32px rgba(56,189,248,.22);
+}
+
+.primaryNav a:focus-visible::before,
+.subnavToggle.active::before{
+  opacity: 1;
+}
+
+/* Mobile: tetap rapi */
+@media (max-width: 980px){
+  .primaryNav a{
+    width: fit-content;
+  }
+}
+/* ======================================================
+   FIX #1: PanelHint di hero terlalu lebar (lebih compact)
+   FIX #2: Nomenklatur (2 kolom) lebih ketengah & proporsional
+   (Layout-only)
+====================================================== */
+
+#halaman-awal .panelHint{
+  display: inline-block;
+  max-width: 520px;
+  width: auto;
+  padding: 10px 12px;
+  margin-top: 10px;
+  border-radius: 14px;
+  line-height: 1.55;
+  font-size: 13px;
+}
+@media (max-width: 980px){
+  #halaman-awal .panelHint{
+    display: block;
+    max-width: none;
+  }
+}
+
+#nomenklatur .contentGrid{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+@media (max-width: 980px){
+  #nomenklatur .contentGrid{
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+}
+/* ======================================================
+   Mini Game – Klasifikasi Alkohol
+====================================================== */
+
+.miniGame{
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.miniGame__title{
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.miniGame__question{
+  font-size: 13px;
+  color: rgba(255,255,255,.85);
+  margin-bottom: 8px;
+}
+
+.miniGame__options{
+  display: flex;
+  gap: 8px;
+}
+
+.miniGame__options button{
+  flex: 1;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: white;
+  cursor: pointer;
+}
+
+.miniGame__options button:hover{
+  background: rgba(56,189,248,.18);
+}
+
+.miniGame__feedback{
+  margin-top: 6px;
+  font-size: 12px;
+}
+/* ======================================================
+   Mini Game – Mode Sulit
+====================================================== */
+
+.miniGame{
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.miniGame__title{
+  font-weight: 800;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.miniGame__question{
+  font-size: 13px;
+  color: rgba(255,255,255,.88);
+  margin-bottom: 10px;
+  line-height: 1.55;
+}
+
+.miniGame__options{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.miniGame__options button{
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.92);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.miniGame__options button:hover{
+  background: rgba(56,189,248,.16);
+  border-color: rgba(56,189,248,.28);
+}
+
+.miniGame__meta{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.miniGame__next{
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.92);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.miniGame__next:hover{
+  background: rgba(34,197,94,.12);
+  border-color: rgba(34,197,94,.24);
+}
+
+.miniGame__score{
+  font-size: 12px;
+  color: rgba(255,255,255,.65);
+}
+
+.miniGame__feedback{
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+/* MiniGame HUD (timer + streak) */
+.miniGame__hud{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+.miniGame__pill{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.86);
+}
+.miniGame__pill.is-urgent{
+  border-color: rgba(248,113,113,.45);
+  box-shadow: 0 0 0 3px rgba(248,113,113,.10);
+}
+.miniGame__pill.is-hot{
+  border-color: rgba(34,197,94,.28);
+  box-shadow: 0 0 0 3px rgba(34,197,94,.10);
+}

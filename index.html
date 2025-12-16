@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kimia Senyawa Karbon — Alkohol (R–OH)</title>
+  <meta name="description" content="Website pembelajaran kimia senyawa karbon fokus alkohol: konsep, nomenklatur, klasifikasi, sifat, reaksi, PubChem, struktur 3D, video, studi kasus, dan kuis." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="siteHeader">
+    <!-- Strip 1: Brand -->
+    <div class="strip strip--1">
+      <div class="container headerRow">
+        <div class="brand">
+          <div class="brandIcon">🧪</div>
+          <div class="brandText">
+            <div class="brandTitle">Kimia Senyawa Karbon</div>
+            <div class="brandSub">Fokus: Alkohol (R–OH)</div>
+          </div>
+        </div>
+
+        <button class="menuBtn" id="menuBtn" aria-expanded="false" aria-label="Buka menu">☰</button>
+      </div>
+    </div>
+
+    <!-- Strip 2: Floating nav (1 deret, kanan) -->
+    <div class="strip strip--2">
+      <div class="container">
+        <div class="floatingNavWrap">
+          <nav class="primaryNav primaryNav--floating" id="nav" aria-label="Navigasi Utama">
+            <a href="#halaman-awal">Halaman Awal</a>
+            <a href="#pubchem">PubChem</a>
+            <a href="#struktur-3d">Struktur 3D</a>
+            <a href="#kuis">Kuis</a>
+            <a href="#ringkasan">Ringkasan</a>
+          </nav>
+
+          <div class="dropdown">
+            <button class="subnavToggle subnavToggle--inline" id="toggleSubnav" aria-expanded="false">
+              <span class="icon">📚</span>
+              <span>Daftar Materi</span>
+              <span class="caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="subnavMenu subnavMenu--dropdown" id="subnavMenu" role="menu" aria-label="Daftar Materi">
+              <a role="menuitem" href="#halaman-awal">Halaman Awal</a>
+              <a role="menuitem" href="#konsep-dasar">Konsep Dasar</a>
+              <a role="menuitem" href="#nomenklatur">Nomenklatur</a>
+              <a role="menuitem" href="#klasifikasi">Klasifikasi</a>
+              <a role="menuitem" href="#sifat-fisika">Sifat Fisika</a>
+              <a role="menuitem" href="#sifat-kimia">Sifat Kimia</a>
+              <a role="menuitem" href="#reaksi">Reaksi & Mekanisme</a>
+              <a role="menuitem" href="#pembuatan">Pembuatan Alkohol</a>
+              <a role="menuitem" href="#data">Data Pendukung</a>
+              <a role="menuitem" href="#studi-kasus">Studi Kasus</a>
+              <a role="menuitem" href="#video">Video</a>
+              <a role="menuitem" href="#pubchem">PubChem</a>
+              <a role="menuitem" href="#struktur-3d">Struktur 3D</a>
+              <a role="menuitem" href="#kuis">Kuis</a>
+              <a role="menuitem" href="#ringkasan">Ringkasan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main id="main">
+
+    <!-- ===== Halaman Awal ===== -->
+    <section class="section hero" id="halaman-awal">
+      <div class="container grid2">
+        <div>
+          <h1>Alkohol (R–OH)</h1>
+          <p class="lead">
+            Alkohol adalah <b>senyawa organik</b> yang memiliki gugus fungsi <b>hidroksil (–OH)</b> yang terikat pada atom karbon (sp<sup>3</sup>) dalam kerangka hidrokarbon.
+            Keberadaan –OH membuat alkohol bersifat <b>polar</b>, mampu membentuk <b>ikatan hidrogen</b>, dan menunjukkan pola reaktivitas khas seperti <b>oksidasi</b>,
+            <b>substitusi</b>, <b>eliminasi</b>, serta <b>esterifikasi</b>.
+          </p>
+
+          <div class="cards3">
+            <article class="card">
+              <div class="cardKicker">Gugus fungsi</div>
+              <div class="cardBig">–OH</div>
+              <div class="muted">Hidroksil terikat pada karbon.</div>
+            </article>
+            <article class="card">
+              <div class="cardKicker">Klasifikasi</div>
+              <div class="cardBig">1° / 2° / 3°</div>
+              <div class="muted">Berdasar derajat karbon yang mengikat –OH.</div>
+            </article>
+            <article class="card">
+              <div class="cardKicker">Contoh</div>
+              <div class="cardBig">Etanol</div>
+              <div class="muted"><span class="chem">C2H6O</span> / <span class="chem">C2H5OH</span></div>
+            </article>
+          </div>
+
+          <div class="ctaRow">
+            <a class="btn btn--primary" href="#struktur-3d">Lihat Struktur 3D</a>
+            <a class="btn" href="#kuis">Mulai Kuis</a>
+            <a class="btn" href="#reaksi">Belajar Reaksi</a>
+          </div>
+
+          <div class="note">
+            <b>Catatan penting:</b> Alkohol (R–OH) berbeda dengan <b>fenol</b> (Ar–OH).
+            Pada fenol, –OH terikat pada cincin aromatik sehingga keasaman dan reaktivitasnya berbeda.
+          </div>
+        </div>
+
+        <aside class="panel">
+          <h3>Inti Konsep</h3>
+          <ul>
+            <li>Ikatan O–H polar → mudah membentuk <b>ikatan hidrogen</b> → titik didih lebih tinggi.</li>
+            <li>Kelarutan: rantai pendek larut; makin panjang rantai → makin hidrofobik.</li>
+            <li>Oksidasi: 1° → aldehid/asam; 2° → keton; 3° sulit dioksidasi tanpa pemutusan C–C.</li>
+            <li>–OH adalah leaving group buruk → sering perlu aktivasi (protonasi / tosylate) untuk substitusi/eliminasi.</li>
+          </ul>
+          <div class="panelHint">
+            <b>Trik cepat klasifikasi:</b> lihat karbon yang menempel pada –OH → hitung jumlah tetangga karbonnya.
+          </div>
+          <div class="miniGame" id="miniGame">
+  <div class="miniGame__title">🎯 Klasifikasi Cepat </div>
+  <div class="miniGame__question" id="mgQuestion"></div>
+
+  <div class="miniGame__options" id="mgOptions">
+    <!-- buttons diisi oleh JS -->
+  </div>
+
+<div class="miniGame__meta">
+  <button class="miniGame__next" id="mgNext" type="button">Soal Berikutnya</button>
+
+  <div class="miniGame__hud">
+    <span class="miniGame__pill" id="mgTimer">⏱ 15s</span>
+    <span class="miniGame__pill" id="mgStreak">🔥 Streak 0</span>
+    <span class="miniGame__score" id="mgScore"></span>
+  </div>
+</div>
+
+  <div class="miniGame__feedback" id="mgFeedback"></div>
+</div>
+
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Konsep Dasar ===== -->
+    <section class="section" id="konsep-dasar">
+      <div class="container">
+        <h2>Konsep Dasar Alkohol</h2>
+        <div class="contentGrid">
+          <div class="contentCard">
+            <h3>Definisi & Struktur Umum</h3>
+            <p>
+              Alkohol memiliki rumus umum <span class="chem">R–OH</span>, dengan <span class="chem">R</span> berupa gugus alkil.
+              Atom oksigen memiliki pasangan elektron bebas sehingga alkohol dapat:
+              (1) menjadi <b>donor H</b> (melalui O–H),
+              dan (2) menjadi <b>akseptor H</b> (melalui pasangan elektron bebas pada O).
+            </p>
+            <p>
+              Alkohol bersifat lebih polar dibanding alkana/alkena karena perbedaan keelektronegatifan O dan H/C.
+              Ini menjelaskan mengapa metanol dan etanol <b>mencampur sempurna</b> dengan air.
+            </p>
+          </div>
+
+          <div class="contentCard">
+            <h3>Ikatan Hidrogen</h3>
+            <p>
+              Ikatan hidrogen antarmolekul alkohol meningkatkan energi yang dibutuhkan untuk memisahkan molekul saat mendidih,
+              sehingga titik didih alkohol umumnya <b>lebih tinggi</b> dibanding hidrokarbon dengan massa molekul sebanding.
+            </p>
+            <ul>
+              <li>Metanol (<span class="chem">CH4O</span>) dan etanol (<span class="chem">C2H6O</span>) sangat mudah berikatan H dengan air.</li>
+              <li>Butanol (<span class="chem">C4H10O</span>) kelarutan menurun karena bagian alkil makin dominan.</li>
+            </ul>
+          </div>
+
+          <div class="contentCard">
+            <h3>Polaritas & Kelarutan</h3>
+            <p>
+              Kelarutan alkohol ditentukan oleh “tarik-menarik” antara bagian polar (<span class="chem">–OH</span>) dan bagian nonpolar (rantai C).
+              Semakin panjang rantai C, kontribusi hidrofobik meningkat → kelarutan menurun.
+            </p>
+            <div class="miniTable">
+              <div class="row head"><div>Contoh</div><div>Perkiraan kelarutan dalam air</div></div>
+              <div class="row"><div>Metanol / Etanol</div><div>Sangat larut (mencampur sempurna)</div></div>
+              <div class="row"><div>Propanol</div><div>Larut</div></div>
+              <div class="row"><div>Butanol</div><div>Terbatas</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Nomenklatur ===== -->
+    <section class="section alt" id="nomenklatur">
+      <div class="container">
+        <h2>Nomenklatur Alkohol (IUPAC)</h2>
+
+        <div class="contentGrid">
+          <div class="contentCard">
+            <h3>Aturan Dasar</h3>
+            <ol>
+              <li>Pilih rantai karbon terpanjang yang mengandung karbon berikatan dengan –OH.</li>
+              <li>Nomori rantai agar posisi –OH mendapat angka terkecil.</li>
+              <li>Nama induk: ubah akhiran “-ana” menjadi “-anol” (alkana → alkanol).</li>
+              <li>Tuliskan posisi –OH: mis. propan-1-ol, propan-2-ol.</li>
+            </ol>
+          </div>
+
+          <div class="contentCard">
+            <h3>Contoh Penamaan</h3>
+            <ul>
+              <li><b>Metanol</b>: <span class="chem">CH3OH</span></li>
+              <li><b>Etanol</b>: <span class="chem">C2H5OH</span> (setara <span class="chem">C2H6O</span>)</li>
+              <li><b>Propan-1-ol</b>: <span class="chem">CH3CH2CH2OH</span></li>
+              <li><b>Propan-2-ol</b> (isopropanol): <span class="chem">(CH3)2CHOH</span></li>
+              <li><b>Etana-1,2-diol</b> (ethylene glycol): <span class="chem">HOCH2CH2OH</span></li>
+              <li><b>Propana-1,2-diol</b> (propylene glycol): <span class="chem">CH3CH(OH)CH2OH</span></li>
+              <li><b>Propana-1,2,3-triol</b> (gliserol): <span class="chem">C3H8O3</span></li>
+            </ul>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Klasifikasi ===== -->
+    <section class="section" id="klasifikasi">
+      <div class="container">
+        <h2>Klasifikasi Alkohol</h2>
+
+        <div class="contentGrid">
+          <div class="contentCard">
+            <h3>1° / 2° / 3° (Primer, Sekunder, Tersier)</h3>
+            <p>
+              Klasifikasi didasarkan pada <b>derajat karbon</b> yang mengikat –OH:
+              <b>primer (1°)</b> jika karbon –OH terikat ke 1 karbon lain,
+              <b>sekunder (2°)</b> terikat ke 2 karbon,
+              <b>tersier (3°)</b> terikat ke 3 karbon.
+            </p>
+            <ul>
+              <li>1°: etanol <span class="chem">CH3CH2OH</span></li>
+              <li>2°: isopropanol <span class="chem">(CH3)2CHOH</span></li>
+              <li>3°: tert-butanol <span class="chem">(CH3)3COH</span></li>
+            </ul>
+          </div>
+
+          <div class="contentCard">
+            <h3>Monohidrik vs Polihidrik</h3>
+            <p>
+              <b>Monohidrik</b> memiliki satu –OH (mis. etanol),
+              sedangkan <b>polihidrik</b> memiliki dua atau lebih –OH (mis. etilen glikol, gliserol).
+              Alkohol polihidrik cenderung punya titik didih lebih tinggi dan viskositas lebih besar karena ikatan hidrogen lebih banyak.
+            </p>
+          </div>
+
+          <div class="contentCard">
+            <h3>Alifatik vs Aromatik (Fenol)</h3>
+            <p>
+              Alkohol umumnya R–OH (alifatik). Jika –OH terikat pada cincin aromatik → fenol (Ar–OH).
+              Fenol lebih asam karena stabilisasi resonansi ion fenoksida, sehingga sifatnya tidak sama dengan alkohol biasa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Sifat Fisika ===== -->
+    <section class="section alt" id="sifat-fisika">
+      <div class="container">
+        <h2>Sifat Fisika Alkohol</h2>
+        <div class="contentGrid">
+          <div class="contentCard">
+            <h3>Titik Didih</h3>
+            <p>
+              Alkohol punya titik didih relatif tinggi karena ikatan hidrogen.
+              Untuk seri homolog: titik didih naik seiring massa molekul, tetapi juga dipengaruhi percabangan (percabangan menurunkan titik didih).
+            </p>
+          </div>
+          <div class="contentCard">
+            <h3>Kelarutan</h3>
+            <p>
+              Metanol dan etanol sangat larut dalam air. Propanol masih larut, butanol terbatas.
+              Poliol (mis. gliserol <span class="chem">C3H8O3</span>) sangat larut karena banyak –OH.
+            </p>
+          </div>
+          <div class="contentCard">
+            <h3>Viskositas</h3>
+            <p>
+              Alkohol polihidrik lebih kental (viskos) karena jaringan ikatan hidrogen lebih kuat.
+              Contoh: gliserol jauh lebih kental daripada etanol.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Sifat Kimia ===== -->
+    <section class="section" id="sifat-kimia">
+      <div class="container">
+        <h2>Sifat Kimia Alkohol</h2>
+
+        <div class="contentGrid">
+          <div class="contentCard">
+            <h3>Keasaman/Basitas (Konsep)</h3>
+            <p>
+              Alkohol bersifat asam sangat lemah (pK<sub>a</sub> ~ 16–18) namun dapat membentuk alkoksida (RO⁻) dengan basa kuat.
+              Oksigen juga dapat terprotonasi dalam suasana asam, membuat –OH lebih mudah “pergi” sebagai air.
+            </p>
+          </div>
+
+          <div class="contentCard">
+            <h3>Oksidasi</h3>
+            <ul>
+              <li><b>Primer (1°):</b> → aldehid → asam karboksilat (oksidator kuat)</li>
+              <li><b>Sekunder (2°):</b> → keton</li>
+              <li><b>Tersier (3°):</b> sulit tanpa pemutusan C–C</li>
+            </ul>
+            <p class="muted">
+              Contoh: etanol <span class="chem">C2H6O</span> → etanal <span class="chem">C2H4O</span> → asam asetat <span class="chem">C2H4O2</span>.
+            </p>
+          </div>
+
+          <div class="contentCard">
+            <h3>Esterifikasi</h3>
+            <p>
+              Alkohol + asam karboksilat (katalis asam) → ester + air.
+              Ini penting pada pembuatan aroma (ester berbau buah) dan material (plastikizer).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reaksi & Mekanisme ===== -->
+    <section class="section alt" id="reaksi">
+      <div class="container">
+        <h2>Reaksi & Mekanisme Penting</h2>
+
+        <div class="contentGrid">
+          <div class="contentCard">
+            <h3>Substitusi (SN1 / SN2)</h3>
+            <p>
+              Karena –OH leaving group buruk, biasanya diaktivasi:
+              (1) protonasi → air (H<sub>2</sub>O) jadi leaving group,
+              atau (2) diubah menjadi tosylate/mesylate.
+            </p>
+            <ul>
+              <li><b>SN1</b> (umum pada 3°): melalui karbokation.</li>
+              <li><b>SN2</b> (umum pada 1°): satu tahap, serangan nukleofil dari belakang.</li>
+            </ul>
+          </div>
+
+          <div class="contentCard">
+            <h3>Eliminasi (E1 / E2)</h3>
+            <p>
+              Alkohol dapat mengalami dehidrasi → alkena.
+              Kondisi asam kuat dan pemanasan sering digunakan.
+            </p>
+            <ul>
+              <li><b>E1</b> mirip SN1 (karbokation), umum pada alkohol 3°.</li>
+              <li><b>E2</b> satu tahap, umum pada kondisi basa kuat.</li>
+            </ul>
+          </div>
+
+          <div class="contentCard">
+            <h3>Dehidrasi Intramolekul</h3>
+            <p>
+              Alkohol pada rantai cocok dapat membentuk eter siklik atau epoksida (untuk diol tertentu) tergantung kondisi reaksi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Pembuatan Alkohol ===== -->
+    <section class="section" id="pembuatan">
+      <div class="container">
+        <h2>Pembuatan Alkohol</h2>
+
+        <div class="contentGrid">
+          <div class="contentCard">
+            <h3>Hidrasi Alkena</h3>
+            <p>
+              Alkena + H<sub>2</sub>O (katalis asam) → alkohol. Aturan Markovnikov sering berlaku pada kondisi tertentu.
+            </p>
+          </div>
+          <div class="contentCard">
+            <h3>Reduksi Karbonil</h3>
+            <p>
+              Aldehid/keton dapat direduksi (mis. NaBH<sub>4</sub>, LiAlH<sub>4</sub>) menjadi alkohol.
+              Aldehid → alkohol primer, keton → alkohol sekunder.
+            </p>
+          </div>
+          <div class="contentCard">
+            <h3>Fermentasi (Etanol)</h3>
+            <p>
+              Fermentasi glukosa menghasilkan etanol dan CO<sub>2</sub> (contoh proses biokimia yang relevan di kehidupan).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Data Pendukung ===== -->
+    <section class="section alt" id="data">
+      <div class="container">
+        <h2>Data Pendukung (Contoh Alkohol Umum)</h2>
+
+        <div class="tableWrap">
+          <table class="dataTable">
+            <thead>
+              <tr>
+                <th>Senyawa</th>
+                <th>Rumus</th>
+                <th>Jenis</th>
+                <th>Catatan singkat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Metanol</td>
+                <td><span class="chem">CH4O</span></td>
+                <td>1°</td>
+                <td>Toksik; pelarut industri.</td>
+              </tr>
+              <tr>
+                <td>Etanol</td>
+                <td><span class="chem">C2H6O</span></td>
+                <td>1°</td>
+                <td>Pelarut; antiseptik; bahan bakar (bioetanol).</td>
+              </tr>
+              <tr>
+                <td>Isopropanol</td>
+                <td><span class="chem">C3H8O</span></td>
+                <td>2°</td>
+                <td>Disinfektan; cepat menguap.</td>
+              </tr>
+              <tr>
+                <td>1-Butanol</td>
+                <td><span class="chem">C4H10O</span></td>
+                <td>1°</td>
+                <td>Kelarutan air terbatas.</td>
+              </tr>
+              <tr>
+                <td>Etilen glikol</td>
+                <td><span class="chem">C2H6O2</span></td>
+                <td>Diol</td>
+                <td>Bahan antifreeze; toksik bila tertelan.</td>
+              </tr>
+              <tr>
+                <td>Propilen glikol</td>
+                <td><span class="chem">C3H8O2</span></td>
+                <td>Diol</td>
+                <td>Pelarut; humektan (lebih aman dibanding etilen glikol).</td>
+              </tr>
+              <tr>
+                <td>Gliserol</td>
+                <td><span class="chem">C3H8O3</span></td>
+                <td>Triol</td>
+                <td>Viskos; banyak aplikasi farmasi & kosmetik.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          <b>Catatan:</b> Data detail (Mr, IUPAC, SMILES, dll) bisa kamu ambil melalui tab <b>PubChem</b>.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Studi Kasus ===== -->
+    <section class="section" id="studi-kasus">
+      <div class="container">
+        <h2>Studi Kasus (Narasi)</h2>
+
+        <div class="caseGrid">
+          <article class="caseCard">
+            <h3>Kasus 1 — “Etanol sebagai Antiseptik”</h3>
+            <p class="muted">Konteks: laboratorium/klinik.</p>
+            <p>
+              Seorang petugas laboratorium membersihkan permukaan meja kerja menggunakan larutan etanol.
+              Ia bertanya mengapa etanol efektif sebagai antiseptik, dan mengapa konsentrasi tertentu sering lebih efektif daripada etanol absolut.
+            </p>
+            <ul>
+              <li><b>Petunjuk konsep:</b> polaritas, denaturasi protein, peran air dalam penetrasi membran.</li>
+              <li><b>Diskusi:</b> apa hubungan ikatan hidrogen alkohol dengan interaksi terhadap biomolekul?</li>
+            </ul>
+          </article>
+
+          <article class="caseCard">
+            <h3>Kasus 2 — “Etilen Glikol vs Propilen Glikol”</h3>
+            <p class="muted">Konteks: industri pendingin & keamanan.</p>
+            <p>
+              Dua cairan bening dipakai sebagai antifreeze: etilen glikol dan propilen glikol.
+              Seorang teknisi menyebutkan etilen glikol berbahaya jika tertelan, sementara propilen glikol lebih aman untuk aplikasi tertentu.
+            </p>
+            <ul>
+              <li><b>Petunjuk konsep:</b> perbedaan struktur (diol), metabolisme, serta bagaimana “mirip” tidak selalu berarti “aman”.</li>
+              <li><b>Diskusi:</b> bagaimana jumlah –OH mempengaruhi sifat fisik (viskositas, kelarutan)?</li>
+            </ul>
+          </article>
+
+          <article class="caseCard">
+            <h3>Kasus 3 — “Mengapa Butanol Kurang Larut?”</h3>
+            <p class="muted">Konteks: praktikum kelarutan.</p>
+            <p>
+              Dalam praktikum, etanol bercampur sempurna dengan air, tetapi 1-butanol membentuk dua lapisan.
+              Mahasiswa diminta menjelaskan faktor struktur yang menyebabkan perbedaan tersebut.
+            </p>
+            <ul>
+              <li><b>Petunjuk konsep:</b> keseimbangan bagian polar (–OH) vs bagian nonpolar (rantai C).</li>
+              <li><b>Diskusi:</b> prediksi kelarutan untuk pentanol/hexanol.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Video ===== -->
+    <section class="section alt" id="video">
+      <div class="container">
+        <h2>Video Pembelajaran</h2>
+        <p class="muted">Jika embed diblokir browser/jaringan, kamu tetap bisa buka langsung di YouTube.</p>
+
+        <div class="videoWrap">
+          <iframe
+            width="560" height="315"
+            src="https://www.youtube.com/embed/FQv29Ph9RIA?si=AyrxaoHclvxjzkSy"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+
+        <p class="muted tiny">
+          Jika video tidak dapat diputar di halaman ini, <a class="link" href="https://youtu.be/FQv29Ph9RIA" target="_blank" rel="noopener">klik di sini untuk membuka di YouTube</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== PubChem ===== -->
+    <section class="section" id="pubchem">
+      <div class="container">
+        <h2>PubChem (Cari nama/rumus/CID)</h2>
+        <p class="muted">
+          Kamu bisa ketik <b>nama</b> (etanol/ethanol), <b>rumus</b> (C2H6O), atau <b>CID</b> (702).
+          Hasil ditampilkan dengan penulisan rumus <b>subskrip</b> standar.
+        </p>
+
+        <div class="pcControls">
+          <input id="pcQuery" class="input" placeholder="Contoh: etanol / ethanol / C2H6O / 702 / propan-2-ol" />
+          <button class="btn btn--primary" id="pcSearchBtn">Cari</button>
+          <a class="btn" id="pcOpenBtn" href="https://pubchem.ncbi.nlm.nih.gov" target="_blank" rel="noopener">Buka PubChem</a>
+        </div>
+
+        <div id="pcStatus" class="status">Masukkan query lalu klik Cari.</div>
+        <div id="pcResults" class="pcGrid"></div>
+
+        <div class="note">
+          <b>Catatan:</b> Bagian PubChem ini memang terbuka untuk berbagai senyawa (tidak hanya alkohol).
+          Struktur 3D di website ini <b>khusus alkohol tertentu</b>.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Struktur 3D ===== -->
+    <section class="section alt" id="struktur-3d">
+      <div class="container">
+        <h2>Struktur Molekul 3D (Ball &amp; Stick + Highlight –OH)</h2>
+        <p class="muted">
+          Putar dengan drag, zoom dengan scroll/pinch. Tombol <b>Spin</b> untuk rotasi otomatis.
+        </p>
+
+        <div class="rowControls">
+          <label class="labelRow">
+            <span class="label">Pilih alkohol:</span>
+            <select id="molSelect" class="select">
+              <option value="887">Metanol (CID 887)</option>
+              <option value="702">Etanol (CID 702)</option>
+              <option value="3776" selected>Isopropanol / propan-2-ol (CID 3776)</option>
+              <option value="263">1-Butanol (CID 263)</option>
+              <option value="174">Etilen glikol (CID 174)</option>
+              <option value="1030">Propilen glikol (CID 1030)</option>
+              <option value="753">Gliserol (CID 753)</option>
+            </select>
+          </label>
+
+          <button class="btn btn--primary" id="spinBtn">Spin</button>
+          <button class="btn" id="resetViewBtn">Reset</button>
+        </div>
+
+        <div id="viewer3dStatus" class="status">Menyiapkan viewer 3D…</div>
+        <div id="viewer3d" class="viewer3d"></div>
+      </div>
+    </section>
+
+    <!-- ===== Kuis ===== -->
+    <section class="section" id="kuis">
+      <div class="container">
+        <h2>Kuis</h2>
+        <p class="muted">Jawab semua lalu klik “Periksa Jawaban”. Kamu akan dapat alasan kenapa benar/salah.</p>
+
+        <div id="quiz" class="quiz"></div>
+
+        <div class="quizActions">
+          <button class="btn btn--primary" id="checkQuiz">Periksa Jawaban</button>
+          <button class="btn" id="resetQuiz">Reset</button>
+          <div id="score" class="score"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Ringkasan ===== -->
+    <section class="section alt" id="ringkasan">
+      <div class="container">
+        <h2>Ringkasan</h2>
+        <div class="contentGrid">
+          <div class="contentCard">
+            <h3>Poin Utama</h3>
+            <ul>
+              <li>Alkohol: <span class="chem">R–OH</span> (–OH pada karbon sp<sup>3</sup>).</li>
+              <li>Ikatan H → titik didih naik, kelarutan tinggi untuk rantai pendek.</li>
+              <li>Klasifikasi 1°/2°/3° menentukan kecenderungan reaksi (oksidasi, SN/E).</li>
+              <li>–OH leaving group buruk → aktivasi (protonasi/tosylate).</li>
+            </ul>
+          </div>
+
+          <div class="contentCard">
+            <h3>Latihan Mandiri</h3>
+            <ol>
+              <li>Tentukan 1°/2°/3°: <span class="chem">CH3CH2OH</span>, <span class="chem">(CH3)2CHOH</span>, <span class="chem">(CH3)3COH</span>.</li>
+              <li>Prediksi produk oksidasi untuk alkohol primer vs sekunder.</li>
+              <li>Bandingkan kelarutan propanol vs butanol (jelaskan secara struktur).</li>
+            </ol>
+          </div>
+
+          <div class="contentCard">
+            <h3>Jelajah Data</h3>
+            <p>
+              Gunakan tab <b>PubChem</b> untuk mencari data senyawa (CID, Mr, IUPAC, SMILES).
+              Gunakan tab <b>Struktur 3D</b> untuk melihat model ball & stick alkohol yang sudah disiapkan.
+            </p>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="muted tiny">© Web belajar Alkohol — dibuat untuk pembelajaran kimia organik (R–OH).</div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 3Dmol.js (CDN) -->
+  <script src="https://unpkg.com/3dmol@2.0.6/build/3Dmol-min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
